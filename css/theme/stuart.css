@@ -334,6 +334,11 @@ body {
 .reveal code.powershell .string {
   color: #008073; }
 
+.reveal code.powershell .inverted-selection{
+  background-color: #008000;
+  color:#000080;
+}
+
 .reveal .slides > section.code.powershell code.powershell,
 .reveal .slides > section > section.code.powershell code.powershell {
   padding: 0; }
