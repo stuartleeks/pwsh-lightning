@@ -112,10 +112,12 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
     274      11     2196       2904       0.27 103432   1 chrome
     259      22    29816      11028       1.47 103844   1 chrome
     260      21    27788      12000       1.61 104240   1 chrome
-    284      24    38988      31012       2.08 104428   1 chrome</pre></span></div>
+    284      24    38988      31012       2.08 104428   1 chrome
+    ...</pre></span></div>
 					</code>
 					<aside class="notes">
 						<p>So... back to Get-Process</p>
+						<p>We get a pretty long list of results (shortened here)</p>
 					</aside>
 				</section>
 				<section class="left middle code powershell" data-transition="fade">
@@ -136,12 +138,14 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 					</aside>
 				</section>
 				<section class="left middle code powershell" data-transition="fade">
-					<code class="powershell">
-						<div><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
-					</code>
-					<aside class="notes">
-						<p>So... back to Get-Process</p>
-					</aside>
+						<code class="powershell">
+							<div class="fragment remove-out" data-fragment-index="0"><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
+							<div class="fragment current-display" data-fragment-index="0"><span>&gt; </span><span class="command">Get-Process</span><span> MicrosoftEdge</span></div>
+							<div class="fragment current-display" data-fragment-index="1"><span>&gt; </span><span class="command">Get-Process</span><span> MicrosoftEdgeCP</span></div>
+						</code>
+						<aside class="notes">
+							<p>So... back to Get-Process</p>
+						</aside>
 				</section>
 			</section>
 			<section class="left">
