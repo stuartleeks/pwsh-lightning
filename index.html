@@ -29,24 +29,25 @@
 		<div class="slides">
 			<section>
 				<section class="left bottom-container" data-transition="none">
-							<div class="bottom">
-								<h2> </h2>
-								<h3></h3>		<p></p>
-								
-							</div>
-							<object data="pwsh-avatar.svg" type="image/svg+xml" style="float:left;margin-top:-3em;margin-left:-9.5em;">
-							</object>
-							<object data="dotnet-bot-pot.svg" type="image/svg+xml" style="float:left;margin-top:-11.75em;margin-left:16em;">
-							</object>
-							<aside class="notes">
-								<p>Welcome!</p>
-								<p>Who uses PowerShell?</p>
-								<p>I started in DOS... moved to command.com... cmd.exe</p>
-								<p>Actually took me a bunch of attempts to switch to PS...</p>
-								<p>Hope to share some of the stuff I like and things to help the transition</p>
-								<p>... or just fun stuff</p>
-							</aside>
-						</section>
+					<div class="bottom">
+						<h2> </h2>
+						<h3></h3>
+						<p></p>
+
+					</div>
+					<object data="pwsh-avatar.svg" type="image/svg+xml" style="float:left;margin-top:-3em;margin-left:-9.5em;">
+					</object>
+					<object data="dotnet-bot-pot.svg" type="image/svg+xml" style="float:left;margin-top:-11.75em;margin-left:16em;">
+					</object>
+					<aside class="notes">
+						<p>Welcome!</p>
+						<p>Who uses PowerShell?</p>
+						<p>I started in DOS... moved to command.com... cmd.exe</p>
+						<p>Actually took me a bunch of attempts to switch to PS...</p>
+						<p>Hope to share some of the stuff I like and things to help the transition</p>
+						<p>... or just fun stuff</p>
+					</aside>
+				</section>
 				<section class="left bottom-container" data-transition="none-in">
 					<div class="bottom">
 						<h2 class="fragment fade-up" data-fragment-index="1" data-autoslide="750">PowerShell:</h2>
@@ -92,7 +93,7 @@
 				<section class="left middle code powershell" data-transition="fade">
 					<code class="powershell">
 						<div><span>&gt; </span><span class="command">Get-Process</span><span class="string"></span></div>
-						<div><span><pre>
+						<div class="fragment"><span><pre>
 Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 -------  ------    -----      -----     ------     --  -- -----------
     385      21    12568      11264      13.81  11112   1 ApplicationFrameHost
@@ -114,6 +115,30 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
     260      21    27788      12000       1.61 104240   1 chrome
     284      24    38988      31012       2.08 104428   1 chrome</pre></span></div>
 					</code>
+					<aside class="notes">
+						<p>So... back to Get-Process</p>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-transition="fade">
+					<code class="powershell">
+						<div><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
+						<div class="fragment"><span><pre>
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+   1187      62    31980      92756       1.48 171016   1 MicrosoftEdge
+   1489      68    71132      93204       1.44  45772   1 MicrosoftEdgeCP
+    447      23     9672      29684       0.42  45904   1 MicrosoftEdgeCP
+   1162      88    96428     140932       2.14  72104   1 MicrosoftEdgeCP
+   1167      87    69840     120600       2.14 162840   1 MicrosoftEdgeCP
+    921      58    61244     106448       0.78 170632   1 MicrosoftEdgeCP</pre></span></div>
+					</code>
+					<aside class="notes">
+						<p>So... back to Get-Process</p>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-transition="fade">
+					<code class="powershell">
+						<div><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
 					<aside class="notes">
 						<p>So... back to Get-Process</p>
 					</aside>
