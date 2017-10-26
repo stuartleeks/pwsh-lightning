@@ -108,6 +108,17 @@ body {
 		visibility: hidden;
 	}
 }
+.reveal .slides section .fragment.remove-out {
+	opacity: 1;
+	visibility: inherit;
+	display: inherit;
+
+	&.visible {
+		opacity: 0;
+		display:none;
+		visibility: hidden;
+	}
+}
 
 .reveal .slides section .fragment.semi-fade-out {
 	opacity: 1;
@@ -167,7 +178,17 @@ body {
 	&.current-fragment {
 		opacity: 1;
 		visibility: inherit;
-	}
+}
+}
+
+.reveal .slides section .fragment.current-display {
+	opacity: 0;
+	display:none;
+
+	&.current-fragment {
+		opacity: 1;
+	display:initial;
+}
 }
 
 .reveal .slides section .fragment.highlight-red,
