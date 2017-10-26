@@ -1,0 +1,115 @@
+/**
+ * Black theme for reveal.js. This is the opposite of the 'white' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../../../node_modules/reveal.js/css/theme/template/mixins";
+@import "../../../node_modules/reveal.js/css/theme/template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../../node_modules/reveal.js/lib/font/source-sans-pro/source-sans-pro.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #222;
+
+$mainColor: #fff;
+$headingColor: #fff;
+
+$mainFontSize: 42px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #42affa;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-light-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #222;
+	}
+}
+
+
+// Theme template ------------------------------
+@import "../../../node_modules/reveal.js/css/theme/template/theme";
+// ---------------------------------------------
+
+     
+.reveal .slides > section,
+.reveal .slides > section > section {
+  line-height: 1.3;
+  font-weight: inherit; 
+  /*SL*/
+  height:100%;
+  }
+.reveal .slides > section.middle,
+.reveal .slides > section > section.middle {
+  /*SL*/
+  height:auto;
+  }
+
+.reveal .slides > section.left,
+.reveal .slides > section > section.left {
+  /*SL*/
+  text-align: left;
+  }
+
+
+  .reveal code {
+    font-family: "Fira Code", "Consolas", Courier;
+  }
+   
+  .reveal code.powershell{
+    font-family: "Consolas", Courier;
+    background-color: #012456;
+        padding: 1.5em;
+     }
+  
+     .reveal code.powershell .command {
+      color: #ff0;
+      }
+      .reveal code.powershell .string {
+        color: #008073;
+        }
+  
+
+
+  
+.bottom-container{
+  position: relative;
+ }
+   .bottom {
+     position: absolute;
+     bottom:1em;
+   }
+
+  ul.small {
+    font-size: 36px;
+  }
+  ul.x-small {
+    font-size: 28px;
+  }
+  ul.xx-small {
+    font-size: 22px;
+  }
+
+
+  .reveal .slides section .fragment.slow {
+    -webkit-transition-duration:1s;
+            transition-duration: 1s; }
+  
+
