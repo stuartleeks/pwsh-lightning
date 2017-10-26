@@ -81,28 +81,31 @@ section.has-light-background {
 
   .reveal code {
     font-family: "Fira Code", "Consolas", Courier;
-  }
-
-  .reveal code pre {
-    margin:0;
-    padding:0;
-    border:none;
-    box-shadow: none;
+    
+     pre {
+      margin:0;
+      padding:0;
+      border:none;
+      box-shadow: none;
+    }
   }
    
   .reveal code.powershell{
     font-family: "Consolas", Courier;
     background-color: $powershellBackgroundColor;
         padding: 1.5em;
-     }
-
-          .reveal code.powershell .command {
-      color: #ff0;
-      }
-      .reveal code.powershell .string {
-        color: #008073;
+        
+        .command {
+          color: #ff0;
         }
-  
+        .string {
+          color: #008073;
+        }
+        .inverted-selection{
+          background-color: #008000;
+          color:#000080;
+        }
+      }
         .reveal .slides > section.code.powershell code.powershell,
         .reveal .slides > section > section.code.powershell code.powershell {
           padding:0;
@@ -110,9 +113,10 @@ section.has-light-background {
       
 
   
-.bottom-container{
+.bottom-container {
   position: relative;
  }
+
    .bottom {
      position: absolute;
      bottom:1em;
@@ -132,5 +136,16 @@ section.has-light-background {
   .reveal .slides section .fragment.slow {
     -webkit-transition-duration:1s;
             transition-duration: 1s; }
-  
 
+.sl-footer {
+  position: absolute;
+  left: 1em;
+  bottom: 1em;
+  font-size: 30px;
+  color: white;
+  font-family: $mainFont;
+  z-index: 11;
+}
+.sl-footer-hidden{
+  visibility: hidden;
+}

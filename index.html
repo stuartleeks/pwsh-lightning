@@ -28,7 +28,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<section class="left bottom-container" data-transition="none">
+				<section class="left bottom-container no-footer" data-transition="none">
 					<div class="bottom">
 						<h2> </h2>
 						<h3></h3>
@@ -47,7 +47,7 @@
 						<p>... or just fun stuff</p>
 					</aside>
 				</section>
-				<section class="left bottom-container" data-transition="none-in">
+				<section class="left bottom-container no-footer" data-transition="none-in">
 					<div class="bottom">
 						<h2 class="fragment fade-up" data-fragment-index="1" data-autoslide="750">PowerShell:</h2>
 						<h3 class="fragment fade-up" data-fragment-index="2" data-autoslide="750">The swiss army knife for .NET devs</h3>
@@ -67,7 +67,7 @@
 						<p>... or just fun stuff</p>
 					</aside>
 				</section>
-				<section>
+				<section class="no-footer">
 					<object data="ps_black_128.svg" type="image/svg+xml" style="padding-top:2em;transform: scale(4.0);">
 					</object>
 				</section>
@@ -196,6 +196,10 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 			</section>
 		</div>
 	</div>
+	
+	<div class="sl-footer sl-footer-hidden">
+		@stuartleeks
+	</div>
 
 	<script src="lib/js/head.min.js"></script>
 	<script src="js/reveal.js"></script>
@@ -204,6 +208,16 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 		// More info about config & dependencies:
 		// - https://github.com/hakimel/reveal.js#configuration
 		// - https://github.com/hakimel/reveal.js#dependencies
+		var footerHandler = function footerHandler( event ) {
+			var noFooter = event.currentSlide.classList.contains("no-footer");
+			if (noFooter){
+				document.getElementsByClassName("sl-footer")[0].classList.add("sl-footer-hidden")
+			} else{
+				document.getElementsByClassName("sl-footer")[0].classList.remove("sl-footer-hidden")
+			}
+		};
+		Reveal.addEventListener( 'slidechanged', footerHandler);
+		Reveal.addEventListener( 'ready', footerHandler);
 		Reveal.initialize({
 			dependencies: [
 				{ src: 'plugin/markdown/marked.js' },
