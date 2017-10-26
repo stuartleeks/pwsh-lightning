@@ -27,7 +27,7 @@
 <body>
 	<div class="reveal">
 		<div class="slides">
-				<!-- <section class="left bottom-container">
+			<section class="left bottom-container" data-transition="none">
 						<div class="bottom">
 							<h2> </h2>
 							<h3></h3>		<p></p>
@@ -45,53 +45,108 @@
 							<p>Hope to share some of the stuff I like and things to help the transition</p>
 							<p>... or just fun stuff</p>
 						</aside>
-					</section> -->
-					<section class="left bottom-container">
-							<div class="bottom">
-								<h2 class="fragment fade-up" data-fragment-index="0" data-autoslide="0">PowerShell:</h2>
-								<h3 class="fragment fade-up" data-fragment-index="1" data-autoslide="750">The swiss army knife for .NET devs</h3>		<p class="fragment" data-fragment-index="3" data-autoslide="0"></p>
-								
-							</div>
-							<object data="pwsh-avatar.svg" type="image/svg+xml" style="float:left;margin-top:-3em;margin-left:-9.5em;">
-							</object>
-							<object data="dotnet-bot-pot.svg" type="image/svg+xml" style="float:left;margin-top:-11.75em;margin-left:16em;">
-							</object>
-							<aside class="notes">
-								<p>Welcome!</p>
-								<p>Who uses PowerShell?</p>
-								<p>I started in DOS... moved to command.com... cmd.exe</p>
-								<p>Actually took me a bunch of attempts to switch to PS...</p>
-								<p>Hope to share some of the stuff I like and things to help the transition</p>
-								<p>... or just fun stuff</p>
-							</aside>
-						</section>
-								<section>
-					<object data="ps_black_128.svg" type="image/svg+xml" style="padding-top:2em;transform: scale(4.0);">
-					</object>
+					</section>
+			<section class="left bottom-container" data-transition="none-in">
+				<div class="bottom">
+					<h2 class="fragment fade-up" data-fragment-index="1" data-autoslide="750">PowerShell:</h2>
+					<h3 class="fragment fade-up" data-fragment-index="2" data-autoslide="750">The swiss army knife for .NET devs</h3>
+					<p class="fragment" data-fragment-index="3" data-autoslide="0"></p>
+
+				</div>
+				<object data="pwsh-avatar.svg" type="image/svg+xml" style="float:left;margin-top:-3em;margin-left:-9.5em;">
+				</object>
+				<object data="dotnet-bot-pot.svg" type="image/svg+xml" style="float:left;margin-top:-11.75em;margin-left:16em;">
+				</object>
+				<aside class="notes">
+					<p>Welcome!</p>
+					<p>Who uses PowerShell?</p>
+					<p>I started in DOS... moved to command.com... cmd.exe</p>
+					<p>Actually took me a bunch of attempts to switch to PS...</p>
+					<p>Hope to share some of the stuff I like and things to help the transition</p>
+					<p>... or just fun stuff</p>
+				</aside>
 			</section>
-			<section class="middle">
+			<section>
+				<object data="ps_black_128.svg" type="image/svg+xml" style="padding-top:2em;transform: scale(4.0);">
+				</object>
+			</section>
+			<section class="left middle code powershell" data-transition="fade-out">
 				<code class="powershell">
-				<span class="command">Get-Process</span><span class="string"> "test"</span>
+				<span>&gt; </span><span class="command">Get-Process</span><span class="string"></span>
 				</code>
+				<aside class="notes">
+					<p>Let's start with a simple command</p>
+				</aside>
+			</section>
+			<section class="left middle code powershell" data-transition="fade">
+				<code class="powershell">
+					<span>&gt; </span><span class="command">[Verb]-[Noun]</span><span class="string"></span>
+				</code>
+				<aside class="notes">
+					<p>Standard format</p>
+				</aside>
+			</section>
+			<section class="left middle code powershell" data-transition="fade">
+				<code class="powershell">
+					<div><span>&gt; </span><span class="command">Get-Process</span><span class="string"></span></div>
+					<div><span><pre>
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+    385      21    12568      11264      13.81  11112   1 ApplicationFrameHost
+    229      19    13060      16908     201.72 164348   0 audiodg
+    102       5     1136       1228       0.17   5924   1 bash
+      0     422     8472       8324       0.94  26220   1 bash
+      0     367     7636       7484       0.91  75216   1 bash
+     92       5     1144       1212       0.08  76588   1 bash
+     92       5     1020       4884       0.02 148004   1 bash
+      0     362     7728       7584       0.45 148352   1 bash
+   3437      51    81260      55516              5040   0 CcmExec
+   2814      90   146332     139220     838.00  73300   1 chrome
+    308      32    73828      42320      33.42  94976   1 chrome
+    577      45   616280     427040     331.44  97760   1 chrome
+    260      22    35544      14236       1.91 102720   1 chrome
+    277      23    33036      25772       2.55 103200   1 chrome
+    274      11     2196       2904       0.27 103432   1 chrome
+    259      22    29816      11028       1.47 103844   1 chrome
+    260      21    27788      12000       1.61 104240   1 chrome
+    284      24    38988      31012       2.08 104428   1 chrome</pre></span></div>
+				</code>
+				<aside class="notes">
+					<p>So... back to Get-Process</p>
+				</aside>
 			</section>
 			<section class="left">
 				<h1>By the way:</h1>
 				<ul class="x-small" class="powershell">
-					<li>Slides: <a href="https://github.com/stuartleeks/pwsh-lightning">github.com/stuartleeks/pwsh-lightning</a></li>
+					<li>Slides:
+						<a href="https://github.com/stuartleeks/pwsh-lightning">github.com/stuartleeks/pwsh-lightning</a>
+					</li>
 					<li>Two flavours
 						<ul>
 							<li>PowerShell - full .NET, Windows-only</li>
-							<li><a href="https://github.com/powershell/powershell"></a>PowerShell Core (pwsh) - xplat, OSS</li>
+							<li>
+								<a href="https://github.com/powershell/powershell"></a>PowerShell Core (pwsh) - xplat, OSS</li>
 						</ul>
 					</li>
-					<li><a href="https://www.powershellgallery.com">PowerShell Gallery</a>"NuGet for PowerShell"</li>
-					<li>Cool modules: 
+					<li>
+						<a href="https://www.powershellgallery.com">PowerShell Gallery</a>"NuGet for PowerShell"</li>
+					<li>Cool modules:
 						<ul>
-							<li><a href="https://www.powershellgallery.com/packages/TabExpansionPlusPlus">TabExpansionPlusPlus</a></li>
-							<li><a href="https://www.powershellgallery.com/packages/posh-git">posh-git</a></li>
-							<li>Azure (<a href="https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-4.4.1&viewFallbackFrom=azurermps-4.4.0">Windows</a>, <a href="https://docs.microsoft.com/en-us/powershell/azure/install-azurermps-maclinux?view=azurermps-4.4.1">macOS + Linux</a> )</li>
-							<li><a href="https://www.powershellgallery.com/packages/posh-humpcompletion/0.4.0">posh-HumpCompletion</a></li>
-							<li><a href="https://www.powershellgallery.com/packages/posh-azure">posh-azure</a></li>
+							<li>
+								<a href="https://www.powershellgallery.com/packages/TabExpansionPlusPlus">TabExpansionPlusPlus</a>
+							</li>
+							<li>
+								<a href="https://www.powershellgallery.com/packages/posh-git">posh-git</a>
+							</li>
+							<li>Azure (
+								<a href="https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-4.4.1&viewFallbackFrom=azurermps-4.4.0">Windows</a>,
+								<a href="https://docs.microsoft.com/en-us/powershell/azure/install-azurermps-maclinux?view=azurermps-4.4.1">macOS + Linux</a> )</li>
+							<li>
+								<a href="https://www.powershellgallery.com/packages/posh-humpcompletion/0.4.0">posh-HumpCompletion</a>
+							</li>
+							<li>
+								<a href="https://www.powershellgallery.com/packages/posh-azure">posh-azure</a>
+							</li>
 						</ul>
 					</li>
 				</ul>

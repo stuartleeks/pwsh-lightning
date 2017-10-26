@@ -37,6 +37,9 @@ $heading2Size: 1.6em;
 $heading3Size: 1.3em;
 $heading4Size: 1.0em;
 
+
+$powershellBackgroundColor: #012456;
+
 section.has-light-background {
 	&, h1, h2, h3, h4, h5, h6 {
 		color: #222;
@@ -53,40 +56,58 @@ section.has-light-background {
 .reveal .slides > section > section {
   line-height: 1.3;
   font-weight: inherit; 
-  /*SL*/
   height:100%;
   }
 .reveal .slides > section.middle,
 .reveal .slides > section > section.middle {
-  /*SL*/
   height:auto;
   }
 
 .reveal .slides > section.left,
 .reveal .slides > section > section.left {
-  /*SL*/
   text-align: left;
   }
 
 
+  .reveal .slides > section.code.powershell,
+  .reveal .slides > section > section.code.powershell {
+    background-color:$powershellBackgroundColor;
+  height:100%;
+  width:100%;
+  padding-left:200px;
+  margin-left:-200px;
+  padding-right:200px;
+}
+
   .reveal code {
     font-family: "Fira Code", "Consolas", Courier;
+  }
+
+  .reveal code pre {
+    margin:0;
+    padding:0;
+    border:none;
+    box-shadow: none;
   }
    
   .reveal code.powershell{
     font-family: "Consolas", Courier;
-    background-color: #012456;
+    background-color: $powershellBackgroundColor;
         padding: 1.5em;
      }
-  
-     .reveal code.powershell .command {
+
+          .reveal code.powershell .command {
       color: #ff0;
       }
       .reveal code.powershell .string {
         color: #008073;
         }
   
-
+        .reveal .slides > section.code.powershell code.powershell,
+        .reveal .slides > section > section.code.powershell code.powershell {
+          padding:0;
+        }
+      
 
   
 .bottom-container{
