@@ -360,12 +360,13 @@ ul.xx-small {
 
 .sl-footer {
   position: absolute;
-  left: 1em;
   bottom: 1em;
   font-size: 30px;
   color: white;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
-  z-index: 11; }
+  z-index: 11;
+  width: 100%;
+  text-align: center; }
 
 .sl-footer-hidden {
   visibility: hidden; }
