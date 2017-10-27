@@ -365,8 +365,18 @@ ul.xx-small {
   color: white;
   font-family: "Source Sans Pro", Helvetica, sans-serif;
   z-index: 11;
-  width: 100%;
-  text-align: center; }
+  width: 100%; }
+  .sl-footer div {
+    display: inline-block; }
+  .sl-footer .left {
+    position: absolute;
+    bottom: 1em;
+    left: 1em; }
+  .sl-footer .center {
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    text-align: center; }
 
 .sl-footer-hidden {
   visibility: hidden; }

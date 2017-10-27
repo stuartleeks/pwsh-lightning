@@ -139,14 +139,27 @@ section.has-light-background {
 
 .sl-footer {
   position: absolute;
-  // left: 1em;
   bottom: 1em;
   font-size: 30px;
   color: white;
   font-family: $mainFont;
   z-index: 11;
   width: 100%;
-  text-align: center;
+  div {
+    display: inline-block;
+  }
+  .left {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+  }
+  .center{
+    position: absolute;
+    bottom: 1em;
+    width: 100%;
+    text-align: center;
+  }
+
 }
 .sl-footer-hidden{
   visibility: hidden;
