@@ -377,6 +377,11 @@ ul.xx-small {
     bottom: 1em;
     width: 100%;
     text-align: center; }
+  .sl-footer .right {
+    position: absolute;
+    bottom: 1em;
+    right: 5em;
+    text-align: right; }
 
 .sl-footer-hidden {
   visibility: hidden; }
