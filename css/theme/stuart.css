@@ -316,23 +316,36 @@ body {
 
 .reveal code {
   font-family: "Fira Code", "Consolas", Courier; }
+  .reveal code .small {
+    font-size: 32px; }
+  .reveal code .x-small {
+    font-size: 26px; }
   .reveal code pre {
     margin: 0;
     padding: 0;
     border: none;
     box-shadow: none; }
-
-.reveal code.powershell {
-  font-family: "Consolas", Courier;
-  background-color: #012456;
-  padding: 1.5em; }
-  .reveal code.powershell .command {
-    color: #ff0; }
-  .reveal code.powershell .string {
-    color: #008073; }
-  .reveal code.powershell .inverted-selection {
-    background-color: #008000;
-    color: #000080; }
+  .reveal code.powershell {
+    font-family: "Consolas", Courier;
+    background-color: #012456;
+    padding: 1.5em; }
+    .reveal code.powershell pre {
+      font-family: "Consolas", Courier; }
+    .reveal code.powershell .command {
+      color: #ff0; }
+    .reveal code.powershell .string {
+      color: #008073; }
+    .reveal code.powershell .comment {
+      color: #008000; }
+    .reveal code.powershell .variable {
+      color: #00FF00; }
+    .reveal code.powershell .inverted-selection {
+      background-color: #008000;
+      color: #000080; }
+  .reveal code.csharp {
+    font-family: "Fira Code", "Consolas", Courier; }
+    .reveal code.csharp pre {
+      font-family: "Fira Code", "Consolas", Courier; }
 
 .reveal .slides > section.code.powershell code.powershell,
 .reveal .slides > section > section.code.powershell code.powershell {
@@ -354,7 +367,8 @@ ul.x-small {
 ul.xx-small {
   font-size: 22px; }
 
-.reveal .slides section .fragment.slow {
+.reveal .slides > section .fragment.slow,
+.reveal .slides > section > section .fragment.slow {
   -webkit-transition-duration: 1s;
   transition-duration: 1s; }
 
