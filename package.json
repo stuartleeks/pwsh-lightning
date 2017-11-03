@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "reveal.js": "^3.5.0"
+    "reveal.js": "^3.5.0",
+    "reveal.js-menu": "^0.7.0"
   },
   "devDependencies": {
     "express": "~4.14.0",
@@ -24,7 +25,7 @@
     "node-sass": "~3.13.0",
     "socket.io": "^1.4.8"
   },
-    "scripts": {
+  "scripts": {
     "start": "grunt serve",
     "build": "grunt"
   },
