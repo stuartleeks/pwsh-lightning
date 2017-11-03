@@ -82,18 +82,27 @@ section.has-light-background {
   .reveal code {
     font-family: "Fira Code", "Consolas", Courier;
     
+    .small{
+      font-size: 32px
+    }
+    .x-small{
+      font-size: 26px
+    }
      pre {
       margin:0;
       padding:0;
       border:none;
       box-shadow: none;
     }
-  }
    
-  .reveal code.powershell{
+  &.powershell{
     font-family: "Consolas", Courier;
     background-color: $powershellBackgroundColor;
         padding: 1.5em;
+
+        pre{
+          font-family: "Consolas", Courier;
+        }
         
         .command {
           color: #ff0;
@@ -101,11 +110,24 @@ section.has-light-background {
         .string {
           color: #008073;
         }
+        .comment{
+          color: #008000;
+        }
+        .variable{
+          color:#00FF00;
+        }
         .inverted-selection{
           background-color: #008000;
           color:#000080;
         }
       }
+    &.csharp{
+      font-family: "Fira Code", "Consolas", Courier;
+      pre{
+        font-family: "Fira Code", "Consolas", Courier;
+      }
+    }
+  }
         .reveal .slides > section.code.powershell code.powershell,
         .reveal .slides > section > section.code.powershell code.powershell {
           padding:0;
@@ -133,7 +155,8 @@ section.has-light-background {
   }
 
 
-  .reveal .slides section .fragment.slow {
+  .reveal .slides > section .fragment.slow,
+  .reveal .slides > section > section .fragment.slow  {
     -webkit-transition-duration:1s;
             transition-duration: 1s; }
 

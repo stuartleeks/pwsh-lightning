@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>reveal.js</title>
+	<title>#PowerShellRocks</title>
 
 	<link rel="stylesheet" href="node_modules/reveal.js/css/reveal.css">
 	<!-- <link rel="stylesheet" href="node_modules/reveal.js/css/theme/black.css"> -->
@@ -28,16 +28,16 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<section class="left bottom-container no-footer" data-transition="none">
+				<section class="left bottom-container no-footer" data-transition="fade-out" >
 					<div class="bottom">
-						<h2> </h2>
+						<h2>#powershellrocks</h2>
 						<h3></h3>
 						<p></p>
 					</div>
 					<object data="pwsh-avatar.svg" type="image/svg+xml" style="float:left;margin-top:-3em;margin-left:-9.5em;">
 					</object>
-					<object data="dotnet-bot-pot.svg" type="image/svg+xml" style="float:left;margin-top:-11.75em;margin-left:16em;">
-					</object>
+					<!-- <object data="dotnet-bot-pot.svg" type="image/svg+xml" style="float:left;margin-top:-11.75em;margin-left:16em;">
+					</object> -->
 					<aside class="notes">
 						<p>Welcome!</p>
 						<p>Who uses PowerShell?</p>
@@ -47,10 +47,10 @@
 						<p>... or just fun stuff</p>
 					</aside>
 				</section>
-				<section class="left bottom-container no-footer" data-transition="none-in">
+				<section class="left bottom-container no-footer" data-transition="fade-in" data-transition-speed="slow">
 					<div class="bottom">
-						<h2 class="fragment fade-up" data-fragment-index="1" data-autoslide="750">PowerShell:</h2>
-						<h3 class="fragment fade-up" data-fragment-index="2" data-autoslide="750">The swiss army knife for .NET devs</h3>
+						<h2 class="fragment fade-up slow" data-fragment-index="1" data-autoslide="750">PowerShell:</h2>
+						<h3 class="fragment fade-up slow" data-fragment-index="2" data-autoslide="750">The swiss army knife for .NET devs</h3>
 						<p class="fragment" data-fragment-index="3" data-autoslide="0"></p>
 
 					</div>
@@ -149,13 +149,174 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 				</section>
 				<section class="left middle code powershell" data-transition="none">
 						<code class="powershell">
-								<div><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
-								<div class="fragment"><pre class="inverted-selection" style="display:inline;">MicrosoftEdge    </pre><pre style="display:inline">MicrosoftEdgeCP</pre></div>
-							</code>
-								</code>
+							<div><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
+							<div class="fragment"><pre class="inverted-selection" style="display:inline;">MicrosoftEdge    </pre><pre style="display:inline">MicrosoftEdgeCP</pre></div>
+						</code>
+					</code>
+					<aside class="notes">
+						<p>And Ctrl+Space shows the completion options in a list</p>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-transition="fade">
+						<code class="powershell">
+							<div class="small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Format-Table</span><span> Id, ProcessName, MainWindowTitle</span></div>
+							<div class="fragment"><span><pre>
+   Id ProcessName          MainWindowTitle
+   -- -----------          ---------------
+ 8132 ApplicationFrameHost Personal (Web) ‎- OneNote
+10276 chrome               neverssl.com - Google Chrome
+ 9468 Code                 index.html - pwsh-lightning - Visual Studio Code
+37980 firefox              #PowerShellRocks - Firefox Developer Edition
+11284 lync                 Skype for Business
+78700 ONENOTE              2017-10-30 Anko - Team call - OneNote
+95800 onenoteim            OneNote
+78220 OUTLOOK              25 Reminder(s)
+11460 powershell           grunt
+57700 powershell           Windows PowerShell
+69512 powershell           Windows PowerShell
+73640 powershell           Select Windows PowerShell
+65868 SystemSettings       Settings
+ 2744 Taskmgr              Task Manager
+84592 Teams                Chat | Microsoft Teams
+77128 WinStore.App         Microsoft Store</pre></span></div>
+						</code>
 						<aside class="notes">
-							<p>And Ctrl+Space shows the completion options in a list</p>
+							<p>We can customise the output easily (picking out *properties on the objects*)</p>
 						</aside>
+					</section>
+				<section class="left middle code powershell" data-transition="fade">
+					<code class="powershell">
+						<div class="small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">ft</span><span> Id, ProcessName, MainWindowTitle</span></div>
+						<div class="fragment"><span><pre>
+   Id ProcessName          MainWindowTitle
+   -- -----------          ---------------
+ 8132 ApplicationFrameHost Personal (Web) ‎- OneNote
+10276 chrome               neverssl.com - Google Chrome
+ 9468 Code                 index.html - pwsh-lightning - Visual Studio Code
+37980 firefox              #PowerShellRocks - Firefox Developer Edition
+11284 lync                 Skype for Business
+78700 ONENOTE              2017-10-30 Anko - Team call - OneNote
+95800 onenoteim            OneNote
+78220 OUTLOOK              25 Reminder(s)
+11460 powershell           grunt
+57700 powershell           Windows PowerShell
+69512 powershell           Windows PowerShell
+73640 powershell           Select Windows PowerShell
+65868 SystemSettings       Settings
+ 2744 Taskmgr              Task Manager
+84592 Teams                Chat | Microsoft Teams
+77128 WinStore.App         Microsoft Store</pre></span></div>
+					</code>
+					<aside class="notes">
+						<p>Lots of aliases ft for Format-Table</p>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-transition="fade">
+						<code class="powershell">
+							<div class="small comment"># Aside:</div>
+							<div class="small"><span>&gt; </span><span class="command">Get-Alias</span></div>
+							<div><span><pre>
+CommandType     Name                                      
+-----------     ----                              
+Alias           % -> ForEach-Object
+Alias           ? -> Where-Object
+...
+Alias           fhx -> Format-Hex                             
+Alias           fl -> Format-List
+Alias           foreach -> ForEach-Object
+Alias           ft -> Format-Table
+Alias           fw -> Format-Wide
+Alias           gal -> Get-Alias
+Alias           gbp -> Get-PSBreakpoint
+Alias           gc -> Get-Content
+Alias           gcb -> Get-Clipboard            
+Alias           gci -> Get-ChildItem
+Alias           gcm -> Get-Command
+Alias           gcs -> Get-PSCallStack
+Alias           gdr -> Get-PSDrive
+Alias           ghy -> Get-History
+...</pre></span></div>
+						</code>
+						<aside class="notes">
+							<p>And of course, you can query aliases in PowerShell :-)</p>
+						</aside>
+					</section>
+				<section class="left middle code powershell" data-transition="fade">
+					<code class="powershell">
+						<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
+						<div class="fragment"><span><pre>
+
+Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
+-------  ------    -----      -----     ------     --  -- -----------
+   1874     128   361192     414524   1,541.17  37980   1 firefox
+   1619      79   254864     196468     392.88  78700   1 ONENOTE
+    668      35    86836     108056      25.84  57700   1 powershell
+    587      32   105752     119200       5.09  69512   1 powershell
+    559      34    78940      90124      11.42  73640   1 powershell
+    655      32   112612     131008       7.03 112240   1 powershell
+								</pre></span></div>
+					</code>
+					<aside class="notes">
+						<p>Easy to filter - create expressions based on properties of the piped objects</p>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-transition="fade">
+					<code class="powershell">
+							<div class="small comment"># PowerShell:</div>
+							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
+					</code>
+					<code class="csharp"><!-- TODO: syntax colouring -->
+						<pre>
+
+//C#
+GetProcess()
+.Where(psItem => psItem.MainWindowTitle.Contains("PowerShell"));
+						</pre>
+					</code>
+					<code class="powershell">
+							<div class="small comment"># PowerShell - short form:</div>
+							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">?</span><span> {</span><span class="variable">$_</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
+					</code>
+					<aside class="notes">
+						<p>PowerShell piping feels similar to C# LINQ extension methods :-)</p>
+						<p>Prefer short-form for interactive, long-form for scripts</p>
+						<ul>
+							<li>VS Code PowerShell extension helps</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-transition="fade">
+					<code class="powershell">
+							<div class="x-small comment"># Find the process</div>
+							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span> notepad</div>
+							<pre>
+
+    Id MainWindowTitle
+    -- ---------------
+ 12572 Untitled - Notepad
+109660 foo.txt - Notepad
+							</pre>
+					</code>
+					<code class="powershell fragment">
+						<div class="x-small comment"># Stop that process</div>
+						<div class="x-small"><span>&gt; </span><span class="command">Stop-Process</span> 109660</div>
+					</code>
+					<code class="powershell fragment">
+						<div>&nbsp;</div>
+						<div class="x-small comment"># Embrace piping</div>
+							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> notepad `<br/>| </span><span class="command">?</span><span> {</span><span class="variable">$_</span><span>.MainWindowTitle.Contains(</span><span class="string">"foo.txt"</span>) }`<br/>| <span class="command">Stop-Process</span></div>
+						</code>
+					<aside class="notes">
+						<p>So, what if you had a process to kill?</p>
+						<p>Could do it manually... find and then kill</p>
+						<p>Or... could have it be automatic :-)</p>
+						<p>So... Stop-Process can be used in multiple ways... how do we discover that?</p>
+					</aside>
+				</section>
+			</section>
+			<section>
+				<section class="left middle code powershell" id="get-help">
+					TODO
 				</section>
 			</section>
 			<section class="left">
