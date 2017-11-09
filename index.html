@@ -28,7 +28,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<section class="left bottom-container no-footer" data-transition="fade-out">
+				<section class="left bottom-container no-footer" data-transition="fade-out" data-menu-title="Intro">
 					<div class="bottom">
 						<h2>#powershellrocks</h2>
 						<h3></h3>
@@ -67,13 +67,13 @@
 						<p>... or just fun stuff</p>
 					</aside>
 				</section>
-				<section class="no-footer">
+				<section class="no-footer" data-menu-title="PowerShell Prompt">
 					<object data="ps_black_128.svg" type="image/svg+xml" style="padding-top:2em;transform: scale(4.0);">
 					</object>
 				</section>
 			</section>
 			<section>
-				<section class="left middle code powershell" data-transition="fade-out">
+				<section class="left middle code powershell" data-transition="fade-out" data-menu-title="Fundamentals">
 					<code class="powershell">
 					<span>&gt; </span><span class="command">Get-Process</span><span class="string"></span>
 					</code>
@@ -120,7 +120,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 						<p>We get a pretty long list of results (shortened here)</p>
 					</aside>
 				</section>
-				<section class="left middle code powershell" data-transition="fade">
+				<section class="left middle code powershell" data-transition="fade" data-menu-title="Wildcards">
 					<code class="powershell">
 						<div><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
 						<div class="fragment"><span><pre>
@@ -211,7 +211,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 						<p>Lots of aliases ft for Format-Table</p>
 					</aside>
 				</section>
-				<section class="left middle code powershell" data-transition="fade">
+				<section class="left middle code powershell" data-transition="fade" data-menu-title="alias">
 					<code class="powershell">
 							<div class="small comment"># Aside:</div>
 							<div class="small"><span>&gt; </span><span class="command">Get-Alias</span></div>
@@ -241,7 +241,7 @@ Alias           ghy -> Get-History
 						<p>And of course, you can query aliases in PowerShell :-)</p>
 					</aside>
 				</section>
-				<section class="left middle code powershell" data-transition="fade">
+				<section class="left middle code powershell" data-transition="fade" data-menu-title="">
 					<code class="powershell">
 						<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
 						<div class="fragment"><span><pre>
@@ -260,7 +260,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 						<p>Easy to filter - create expressions based on properties of the piped objects</p>
 					</aside>
 				</section>
-				<section class="left middle code powershell" data-transition="fade">
+				<section class="left middle code powershell" data-transition="fade" data-menu-title="Pipelines cf C#">
 					<code class="powershell">
 							<div class="small comment"># PowerShell:</div>
 							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
@@ -285,7 +285,7 @@ GetProcess()
 						</ul>
 					</aside>
 				</section>
-				<section class="left middle code powershell" data-transition="fade">
+				<section class="left middle code powershell" data-transition="fade" data-menu-title="Pipeline to Stop-Process">
 					<code class="powershell">
 							<div class="x-small comment"># Find the process</div>
 							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span> notepad</div>
@@ -303,7 +303,7 @@ GetProcess()
 					</code>
 					<code class="powershell fragment">
 						<div>&nbsp;</div>
-						<div class="x-small comment"># Embrace piping</div>
+						<div class="x-small comment"># ... or embrace piping</div>
 							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> notepad `<br/>| </span><span class="command">?</span><span> {</span><span class="variable">$_</span><span>.MainWindowTitle.Contains(</span><span class="string">"foo.txt"</span>) }`<br/>| <span class="command">Stop-Process</span></div>
 						</code>
 					<aside class="notes">
@@ -319,7 +319,7 @@ GetProcess()
 					TODO
 				</section>
 			</section>
-			<section class="left">
+			<section class="left" data-menu-title="Outro">
 				<h1>By the way:</h1>
 				<ul class="x-small" class="powershell">
 					<li>Slides:
@@ -420,7 +420,7 @@ GetProcess()
 
 				// Hide slides from the menu that do not have a title.
 				// Set to 'true' to only list slides with titles.
-				hideMissingTitles: false,
+				hideMissingTitles: true,
 
 				// Add markers to the slide titles to indicate the 
 				// progress through the presentation
