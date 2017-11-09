@@ -28,7 +28,7 @@
 	<div class="reveal">
 		<div class="slides">
 			<section>
-				<section class="left bottom-container no-footer" data-transition="fade-out" data-menu-title="Intro">
+				<section class="left bottom-container no-footer" data-transition="fade-out" data-menu-title="Intro" id="intro">
 					<div class="bottom">
 						<h2>#powershellrocks</h2>
 						<h3></h3>
@@ -75,7 +75,7 @@
 			<section>
 				<section class="left middle code powershell" data-transition="fade-out" data-menu-title="Fundamentals">
 					<code class="powershell">
-					<span>&gt; </span><span class="command">Get-Process</span><span class="string"></span>
+					&gt; <span class="command">Get-Process</span><span class="string"></span>
 					</code>
 					<aside class="notes">
 						<p>Let's start with a simple command</p>
@@ -83,7 +83,7 @@
 				</section>
 				<section class="left middle code powershell" data-transition="fade">
 					<code class="powershell">
-						<span>&gt; </span><span class="command">[Verb]-[Noun]</span><span class="string"></span>
+						&gt; ><span class="command">[Verb]-[Noun]</span><span class="string"></span>
 					</code>
 					<aside class="notes">
 						<p>Standard format</p>
@@ -91,7 +91,7 @@
 				</section>
 				<section class="left middle code powershell" data-transition="fade">
 					<code class="powershell">
-						<div><span>&gt; </span><span class="command">Get-Process</span><span class="string"></span></div>
+						<div>&gt; ><span class="command">Get-Process</span><span class="string"></span></div>
 						<div class="fragment"><span><pre>
 Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 -------  ------    -----      -----     ------     --  -- -----------
@@ -122,7 +122,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 				</section>
 				<section class="left middle code powershell" data-transition="fade" data-menu-title="Wildcards">
 					<code class="powershell">
-						<div><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
+						<div>&gt; <span class="command">Get-Process</span><span> Mic*</span></div>
 						<div class="fragment"><span><pre>
 Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 -------  ------    -----      -----     ------     --  -- -----------
@@ -139,9 +139,9 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 				</section>
 				<section class="left middle code powershell" data-transition="fade-in none-out">
 					<code class="powershell">
-							<div class="fragment remove-out" data-fragment-index="0"><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
-							<div class="fragment current-display" data-fragment-index="0"><span>&gt; </span><span class="command">Get-Process</span><span> MicrosoftEdge</span></div>
-							<div class="fragment current-display" data-fragment-index="1"><span>&gt; </span><span class="command">Get-Process</span><span> MicrosoftEdgeCP</span></div>
+							<div class="fragment remove-out" data-fragment-index="0">&gt; <span class="command">Get-Process</span><span> Mic*</span></div>
+							<div class="fragment current-display" data-fragment-index="0">&gt; <span class="command">Get-Process</span><span> MicrosoftEdge</span></div>
+							<div class="fragment current-display" data-fragment-index="1">&gt; <span class="command">Get-Process</span><span> MicrosoftEdgeCP</span></div>
 						</code>
 					<aside class="notes">
 						<p>As an aside, tab completion works with wildcards</p>
@@ -149,7 +149,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 				</section>
 				<section class="left middle code powershell" data-transition="none">
 					<code class="powershell">
-							<div><span>&gt; </span><span class="command">Get-Process</span><span> Mic*</span></div>
+							<div>&gt; <span class="command">Get-Process</span><span> Mic*</span></div>
 							<div class="fragment"><pre class="inverted-selection" style="display:inline;">MicrosoftEdge    </pre><pre style="display:inline">MicrosoftEdgeCP</pre></div>
 						</code>
 					</code>
@@ -158,8 +158,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 					</aside>
 				</section>
 				<section class="left middle code powershell" data-transition="fade">
-					<code class="powershell">
-							<div class="small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Format-Table</span><span> Id, ProcessName, MainWindowTitle</span></div>
+					<code class="powershell small">&gt; <span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Format-Table</span><span> Id, ProcessName, MainWindowTitle</span>
 							<div class="fragment"><span><pre>
    Id ProcessName          MainWindowTitle
    -- -----------          ---------------
@@ -185,8 +184,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 					</aside>
 				</section>
 				<section class="left middle code powershell" data-transition="fade">
-					<code class="powershell">
-						<div class="small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">ft</span><span> Id, ProcessName, MainWindowTitle</span></div>
+					<code class="powershell small">&gt; <span class="command">Get-Process</span><span> `<br/>| </span><span class="command">ft</span><span> Id, ProcessName, MainWindowTitle</span>
 						<div class="fragment"><span><pre>
    Id ProcessName          MainWindowTitle
    -- -----------          ---------------
@@ -212,9 +210,9 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 					</aside>
 				</section>
 				<section class="left middle code powershell" data-transition="fade" data-menu-title="alias">
-					<code class="powershell">
-							<div class="small comment"># Aside:</div>
-							<div class="small"><span>&gt; </span><span class="command">Get-Alias</span></div>
+					<code class="powershell small">
+							<div class="comment"># Aside:</div>
+							<div>&gt; <span class="command">Get-Alias</span></div>
 							<div><span><pre>
 CommandType     Name                                      
 -----------     ----                              
@@ -242,8 +240,8 @@ Alias           ghy -> Get-History
 					</aside>
 				</section>
 				<section class="left middle code powershell" data-transition="fade" data-menu-title="">
-					<code class="powershell">
-						<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
+					<code class="powershell x-small">
+						<div>&gt; <span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
 						<div class="fragment"><span><pre>
 
 Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
@@ -261,9 +259,9 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 					</aside>
 				</section>
 				<section class="left middle code powershell" data-transition="fade" data-menu-title="Pipelines cf C#">
-					<code class="powershell">
-							<div class="small comment"># PowerShell:</div>
-							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
+					<code class="powershell x-small">
+							<div class="comment"># PowerShell:</div>
+							<div>&gt; <span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
 					</code>
 					<code class="csharp"><!-- TODO: syntax colouring -->
 						<pre>
@@ -273,9 +271,9 @@ GetProcess()
 .Where(psItem => psItem.MainWindowTitle.Contains("PowerShell"));
 						</pre>
 					</code>
-					<code class="powershell">
-							<div class="small comment"># PowerShell - short form:</div>
-							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> `<br/>| </span><span class="command">?</span><span> {</span><span class="variable">$_</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
+					<code class="powershell x-small">
+							<div class="comment"># PowerShell - short form:</div>
+							<div>&gt; <span class="command">Get-Process</span><span> `<br/>| </span><span class="command">?</span><span> {</span><span class="variable">$_</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
 					</code>
 					<aside class="notes">
 						<p>PowerShell piping feels similar to C# LINQ extension methods :-)</p>
@@ -286,9 +284,11 @@ GetProcess()
 					</aside>
 				</section>
 				<section class="left middle code powershell" data-transition="fade" data-menu-title="Pipeline to Stop-Process">
+					<code class="powershell x-small">
+							<div class="comment"># Find the process</div>
+							<div>&gt; <span class="command">Get-Process</span> notepad</div>
+					</code>
 					<code class="powershell">
-							<div class="x-small comment"># Find the process</div>
-							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span> notepad</div>
 							<pre>
 
     Id MainWindowTitle
@@ -297,14 +297,14 @@ GetProcess()
 109660 foo.txt - Notepad
 							</pre>
 					</code>
-					<code class="powershell fragment">
-						<div class="x-small comment"># Stop that process</div>
-						<div class="x-small"><span>&gt; </span><span class="command">Stop-Process</span> 109660</div>
+					<code class="powershell x-small fragment">
+						<div class="comment"># Stop that process</div>
+						<div>&gt; <span class="command">Stop-Process</span> 109660</div>
 					</code>
-					<code class="powershell fragment">
+					<code class="powershell x-small fragment">
 						<div>&nbsp;</div>
-						<div class="x-small comment"># ... or embrace piping</div>
-							<div class="x-small"><span>&gt; </span><span class="command">Get-Process</span><span> notepad `<br/>| </span><span class="command">?</span><span> {</span><span class="variable">$_</span><span>.MainWindowTitle.Contains(</span><span class="string">"foo.txt"</span>) }`<br/>| <span class="command">Stop-Process</span></div>
+						<div class="comment"># ... or embrace piping</div>
+						<div>&gt; <span class="command">Get-Process</span><span> notepad `<br/>| </span><span class="command">?</span><span> {</span><span class="variable">$_</span><span>.MainWindowTitle.Contains(</span><span class="string">"foo.txt"</span>) }`<br/>| <span class="command">Stop-Process</span></div>
 						</code>
 					<aside class="notes">
 						<p>So, what if you had a process to kill?</p>
@@ -315,8 +315,198 @@ GetProcess()
 				</section>
 			</section>
 			<section>
-				<section class="left middle code powershell" id="get-help">
-					TODO
+				<section class="left middle code powershell" data-transition="fade" data-menu-title="Get-Help" id="get-help">
+					<code class="powershell x-small animate-type">&gt; <span class="command">Get-Help</span> Stop-Process</code>
+					<code class="powershell">
+						<pre class="xx-small fragment">
+NAME
+    Stop-Process
+
+SYNOPSIS
+    Stops one or more running processes.
+
+
+SYNTAX
+    Stop-Process [-Id] <Int32[]> [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
+
+    Stop-Process [-InputObject] <Process[]> [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
+
+    Stop-Process [-Confirm] [-Force] -Name <String[]> [-PassThru] [-WhatIf] [<CommonParameters>]
+...
+
+REMARKS
+    To see the examples, type: "get-help Stop-Process -examples".
+    For more information, type: "get-help Stop-Process -detailed".
+    For technical information, type: "get-help Stop-Process -full".
+    For online help, type: "get-help Stop-Process -online"
+							
+						</pre>
+					</code>
+					<aside class="notes">
+						<ul>
+							<li>There are build in cmdlets for querying powershell</li>
+							<li>Like reflection, but feels more first-class citizen :-)</li>
+							<li>Note the *syntax* section - multiple 'overloads' (Parameter Sets)</li>
+							<li>Also note the remarks: examples!</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-transition="fade">
+					<code class="powershell x-small">&gt; <span class="command">Get-Help</span> Stop-Process <span class="switch">-Examples</span></code>
+					<code class="powershell">
+						<pre class="xx-small">
+...
+    Example 1: Stop all instances of a process
+
+    PS C:\>Stop-Process -Name "notepad"
+
+    This command stops all instances of the Notepad process on the computer. Each instance of Notepad runs in its own process. It uses the Name parameter to specify the processes,
+    all of which have the same name. If you were to use the Id parameter to stop the same processes, you would have to list the process IDs of each instance of Notepad.
+    Example 2: Stop a specific instance of a process
+
+    PS C:\>Stop-Process -Id 3952 -Confirm -PassThru
+    Confirm
+    Are you sure you want to perform this action?
+    Performing operation "Stop-Process" on Target "notepad (3952)".
+    [Y] Yes  [A] Yes to All  [N] No  [L] No to All  [S] Suspend  [?] Help
+    (default is "Y"):y
+    Handles  NPM(K)    PM(K)      WS(K) VM(M)   CPU(s)     Id ProcessName
+    -------  ------    -----      ----- -----   ------     -- -----------
+    41       2      996       3212    31            3952 notepad
+...
+						</pre>
+					</code>
+					<aside class="notes">
+						<ul>
+							<li>Get-Help is great for finding out how to use a command... how do you find the command?</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-transition="fade" data-menu-title="Get-Command">
+					<code class="powershell x-small">&gt; <span class="command">Get-Command</span></code>
+					<code class="powershell x-small">
+						<pre>
+CommandType     Name                                               Version    Source
+-----------     ----                                               -------    ------
+Alias           Add-AdlAnalyticsDataSource                         3.2.1      AzureRM.DataLakeAnalytics
+Alias           Add-AdlAnalyticsDataSource                         2.1.0      AzureRM.DataLakeAnalytics
+Alias           Add-AdlAnalyticsFirewallRule                       3.2.1      AzureRM.DataLakeAnalytics
+Alias           Add-AdlStoreFirewallRule                           4.2.1      AzureRM.DataLakeStore
+Alias           Add-AdlStoreItemContent                            4.2.1      AzureRM.DataLakeStore
+Alias           Add-AdlStoreItemContent                            2.1.0      AzureRM.DataLakeStore
+Alias           Add-AdlStoreTrustedIdProvider                      4.2.1      AzureRM.DataLakeStore
+Alias           Add-AzureHDInsightConfigValues                     2.1.0      Azure
+Alias           Add-AzureHDInsightMetastore                        2.1.0      Azure
+Alias           Add-AzureHDInsightStorage                          2.1.0      Azure
+Alias           Add-AzureRmIotHubEHCG                              2.2.1      AzureRM.IotHub
+Alias           Add-ProvisionedAppxPackage                         3.0        Dism
+Alias           Add-ProvisioningPackage                            3.0        Provisioning
+Alias           Add-TrustedProvisioningCertificate                 3.0        Provisioning
+Alias           Add-WAPackEnvironment                              2.1.0      Azure
+Alias           Apply-WindowsUnattend                              3.0        Dism
+Alias           Confirm-SSLegacyVolumeContainerStatus              2.1.0      Azure
+Alias           Disable-AzureRmHDInsightOMS                        3.2.1      AzureRM.HDInsight
+Alias           Disable-PhysicalDiskIndication                     2.0.0.0    Storage
+Alias           Disable-StorageDiagnosticLog                       2.0.0.0    Storage
+Alias           Disable-WAPackWebsiteApplicationDiagnostic         2.1.0      Azure
+Alias           Enable-AdlStoreKeyVault                            4.2.1      AzureRM.DataLakeStore
+Alias           Enable-AzureRmHDInsightOMS                         3.2.1      AzureRM.HDInsight
+Alias           Enable-PhysicalDiskIndication                      2.0.0.0    Storage
+Alias           Enable-StorageDiagnosticLog                        2.0.0.0    Storage
+Alias           Enable-WAPackWebsiteApplicationDiagnositc          2.1.0      Azure
+Alias           Export-AdlStoreItem                                4.2.1      AzureRM.DataLakeStore
+Alias           Export-AdlStoreItem                                2.1.0      AzureRM.DataLakeStore
+Alias           Export-AzureAsInstanceLog                          0.4.2      Azure.AnalysisServices
+Alias           Export-VMCheckpoint                                2.0.0.0    Hyper-V
+Alias           Flush-Volume                                       2.0.0.0    Storage
+Alias           Get-AdlAnalyticsAccount                            3.2.1      AzureRM.DataLakeAnalytics
+...						</pre>
+					</code>
+					<aside class="notes">
+						<ul>
+							<li>Don't forget, we can use wildcards etc here</li>
+							<li>Also, note the source column - that shows which Module the cmdlet is from...</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-menu-title="Get-Module">
+					<div>
+						<code class="powershell x-small"><span class="command">Get-Module</span></code>
+						<code class="powershell x-small fragment">
+							<pre>ModuleType Version    Name                                ExportedCommands
+---------- -------    ----                                ----------------
+Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Computer, Add-Content, Checkpoint-Computer, Clear-Content...}
+Manifest   3.1.0.0    Microsoft.PowerShell.Utility        {Add-Member, Add-Type, Clear-Variable, Compare-Object...}
+Script     0.7.2.0    posh-git                            {Add-PoshGitToProfile, Add-SshKey, Enable-GitColors, Get-AliasPattern...}
+Script     0.4.0      posh-HumpCompletion
+Script     1.0.0.1    PowerShellGet                       {Find-Command, Find-DscResource, Find-Module, Find-RoleCapability...}
+Script     1.2        PSReadline                          {Get-PSReadlineKeyHandler, Get-PSReadlineOption, Remove-PSReadlineKeyHandler, Set-PSReadlineKeyHandler...}
+Script     1.2        TabExpansionPlusPlus                {Get-ArgumentCompleter, Get-CommandTreeCompletion, Get-CommandWithParameter, Get-CompletionPrivateData...}
+</pre>
+						</code>
+					</div>
+					<div>
+						<code class="powershell x-small fragment"><span class="command">Install-Module</span><span class="switch"> -Name</span> posh-HumpCompletion</code>
+					</div>
+					<div>
+						<code class="powershell x-small fragment"><pre class="error">Install-Module : Administrator rights are required to install modules in 'C:\Program Files\WindowsPowerShell\Modules'. Log on to the computer with an account that has Administrator
+rights, and then try again, or install 'C:\Users\stuartle\Documents\WindowsPowerShell\Modules' by adding "-Scope CurrentUser" to your command. You can also try running the Windows
+PowerShell session with elevated rights (Run as Administrator).
+At line:1 char:1
++ Install-Module -Name posh-HumpCompletion
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Install-Module], ArgumentException
+	+ FullyQualifiedErrorId : InstallModuleNeedsCurrentUserScopeParameterForNonAdminUser,Install-Module
+
+</pre></code>
+					</div>
+					<div>
+						<code class="powershell x-small fragment">
+							<div class="comment"># or avoid the sea of red...</div>
+							<div><span class="command">Install-Module</span><span class="switch"> -Name</span> posh-HumpCompletion <span class="switch">-Scope</span> CurrentUser</div>
+						</code>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>Get-Module to list modules</li>
+							<li>Install-Module to install modules (think NuGet for modules!)</li>
+							<li>Can install just for current user to skip admin requirement</li>
+						</ul>
+					</aside>
+				</section>
+				<section class="left middle code powershell" data-transition="fade">
+					<code class="powershell x-small">&gt; <span class="string">"PowerShell Rocks"</span>.ToUpper()</code>
+					<code class="powershell fragment">
+						<pre class="xx-small">POWERSHELL ROCKS
+						</pre>
+					</code>
+					<code class="powershell x-small fragment">&gt; <span class="string">"PowerShell Rocks"</span>.ToUpper</code>
+					<code class="powershell fragment">
+						<pre class="x-small">OverloadDefinitions
+-------------------
+string ToUpper()
+string ToUpper(cultureinfo culture)
+						</pre>
+					</code>
+					<code class="powershell x-small fragment">&gt; [<span class="dotnet-type">string</span>]::Format</code>
+					<code class="powershell fragment">
+						<pre class="x-small">OverloadDefinitions
+-------------------
+static string Format(string format, System.Object arg0)
+static string Format(string format, System.Object arg0, System.Object arg1)
+static string Format(string format, System.Object arg0, System.Object arg1, System.Object arg2)
+static string Format(string format, Params System.Object[] args)
+static string Format(System.IFormatProvider provider, string format, System.Object arg0)
+static string Format(System.IFormatProvider provider, string format, System.Object arg0, System.Object arg1)
+static string Format(System.IFormatProvider provider, string format, System.Object arg0, System.Object arg1, System.Object arg2)
+static string Format(System.IFormatProvider provider, string format, Params System.Object[] args)</pre>
+					</code>
+					<aside class="notes">
+						<ul>
+							<li>Also mentioned based on .NET... can call .NET methods :-)</li>
+							<li>But also get help for .NET :-D</li>
+						</ul>
+					</aside>
 				</section>
 			</section>
 			<section class="left" data-menu-title="Outro">

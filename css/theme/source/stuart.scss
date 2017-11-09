@@ -82,11 +82,14 @@ section.has-light-background {
   .reveal code {
     font-family: "Fira Code", "Consolas", Courier;
     
-    .small{
+    &.small{
       font-size: 32px
     }
-    .x-small{
+    &.x-small{
       font-size: 26px
+    }
+    &.xx-small{
+      font-size: 20px
     }
      pre {
       margin:0;
@@ -116,9 +119,18 @@ section.has-light-background {
         .variable{
           color:#00FF00;
         }
+        .switch{
+          color: #808080;
+        }
+        .dotnet-type{
+          color:#c0c0c0;
+        }
         .inverted-selection{
           background-color: #008000;
           color:#000080;
+        }
+        .error { 
+          color: red;
         }
       }
     &.csharp{
@@ -132,7 +144,7 @@ section.has-light-background {
         .reveal .slides > section > section.code.powershell code.powershell {
           padding:0;
         }
-      
+
 
   
 .bottom-container {
@@ -162,19 +174,22 @@ section.has-light-background {
 
 .sl-footer {
   position: absolute;
-  bottom: 1em;
+  bottom: 0em;
   font-size: 30px;
   color: white;
   font-family: $mainFont;
   z-index: 11;
   width: 100%;
+  height: 2em;
+  padding-top: 0.25em;
+  background-color: $backgroundColor;
   div {
     display: inline-block;
   }
   .left {
     position: absolute;
     bottom: 1em;
-    left: 1em;
+    left: 2em;
   }
   .center{
     position: absolute;
