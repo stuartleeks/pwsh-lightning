@@ -351,9 +351,17 @@ body {
     .reveal code.powershell .error {
       color: red; }
   .reveal code.csharp {
-    font-family: "Fira Code", "Consolas", Courier; }
+    font-family: "Fira Code", "Consolas", Courier;
+    color: #DCDCDC;
+    background-color: #1E1E1E; }
     .reveal code.csharp pre {
       font-family: "Fira Code", "Consolas", Courier; }
+    .reveal code.csharp .comment {
+      color: #57A64A; }
+    .reveal code.csharp .symbol {
+      color: #B4B4B4; }
+    .reveal code.csharp .string {
+      color: #D69D85; }
 
 .reveal .slides > section.code.powershell code.powershell,
 .reveal .slides > section > section.code.powershell code.powershell {

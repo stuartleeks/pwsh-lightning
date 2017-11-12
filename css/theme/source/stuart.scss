@@ -138,6 +138,26 @@ section.has-light-background {
       pre{
         font-family: "Fira Code", "Consolas", Courier;
       }
+      // color: #D4D4D4;
+
+      // .comment {
+      //   color: #57A64A;
+      // }
+      // .method{
+      //   color: #DCDCAA;
+      // }
+      color: #DCDCDC;
+      background-color: #1E1E1E;
+      .comment {
+        color: #57A64A;
+      }
+      .symbol{
+        color: #B4B4B4;
+      }
+      .string{
+        color:#D69D85;
+      }
+
     }
   }
         .reveal .slides > section.code.powershell code.powershell,
