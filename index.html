@@ -269,15 +269,16 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 							<div class="comment"># PowerShell:</div>
 							<div>&gt; <span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
 					</code>
-					<code class="csharp"><!-- TODO: syntax colouring -->
+					<code class="csharp fragment" style="margin-top:1em;margin-bottom: 1em;padding-left:0.5em;display:block;">
 						<pre>
 
-//C#
-GetProcess()
-.Where(psItem => psItem.MainWindowTitle.Contains("PowerShell"));
-						</pre>
+<span class="comment">//C#</span>	
+<span class="method">GetProcess</span>()
+<span class="symbol">.</span><span class="method">Where</span>(psItem <span class="symbol">=></span> psItem.MainWindowTitle.Contains(<span class="string">"PowerShell"</span>));
+
+</pre>
 					</code>
-					<code class="powershell x-small">
+					<code class="powershell x-small fragment">
 							<div class="comment"># PowerShell - short form:</div>
 							<div>&gt; <span class="command">Get-Process</span><span> `<br/>| </span><span class="command">?</span><span> {</span><span class="variable">$_</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
 					</code>
