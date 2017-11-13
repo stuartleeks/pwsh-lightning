@@ -60,13 +60,13 @@
 						<p>Who tried PowerShell but didn't get on with it?</p>
 						<p>I started in DOS... moved to command.com... cmd.exe</p>
 						<p>Actually took me a bunch of attempts to switch to PS...</p>
-						<p>Hope to share 
+						<p>Hope to share
 							<ul>
 								<li>some of the stuff I like in PowerShell</li>
 								<li>things to help the transition</li>
 								<li>... or just fun stuff</li>
 							</ul>
-						 </p>
+						</p>
 					</aside>
 				</section>
 				<section class="no-footer" data-menu-title="PowerShell Prompt">
@@ -129,7 +129,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 				<section class="left middle code powershell" data-transition="fade" data-menu-title="Wildcards">
 					<code class="powershell">
 						<div>&gt; <span class="command">Get-Process</span><span> Mic*</span></div>
-						<div class="fragment"><span><pre>
+						<div class=""><span><pre>
 Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 -------  ------    -----      -----     ------     --  -- -----------
    1187      62    31980      92756       1.48 171016   1 MicrosoftEdge
@@ -191,7 +191,7 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 				</section>
 				<section class="left middle code powershell" data-transition="fade">
 					<code class="powershell small">&gt; <span class="command">Get-Process</span><span> `<br/>| </span><span class="command">ft</span><span> Id, ProcessName, MainWindowTitle</span>
-						<div class="fragment"><span><pre>
+						<div class=""><span><pre>
    Id ProcessName          MainWindowTitle
    -- -----------          ---------------
  8132 ApplicationFrameHost Personal (Web) ‎- OneNote
@@ -266,10 +266,9 @@ Handles  NPM(K)    PM(K)      WS(K)     CPU(s)     Id  SI ProcessName
 				</section>
 				<section class="left middle code powershell" data-transition="fade" data-menu-title="Pipelines cf C#">
 					<code class="powershell x-small">
-							<div class="comment"># PowerShell:</div>
 							<div>&gt; <span class="command">Get-Process</span><span> `<br/>| </span><span class="command">Where-Object</span><span> {</span><span class="variable">$PSItem</span><span>.MainWindowTitle.Contains(</span><span class="string">"PowerShell"</span>) }</div>
 					</code>
-					<code class="csharp fragment" style="margin-top:1em;margin-bottom: 1em;padding-left:0.5em;display:block;">
+					<code class="csharp" style="margin-top:1em;margin-bottom: 1em;padding-left:0.5em;display:block;">
 						<pre>
 
 <span class="comment">//C#</span>	
@@ -334,11 +333,11 @@ SYNOPSIS
 
 
 SYNTAX
-    Stop-Process [-Id] <Int32[]> [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
+    Stop-Process [-Id] &lt;Int32[]&gt; [-Confirm] [-Force] [-PassThru] [-WhatIf] [&lt;CommonParameters&gt;]
 
-    Stop-Process [-InputObject] <Process[]> [-Confirm] [-Force] [-PassThru] [-WhatIf] [<CommonParameters>]
+    Stop-Process [-InputObject] &lt;Process[]&gt; [-Confirm] [-Force] [-PassThru] [-WhatIf] [&lt;CommonParameters&gt;]
 
-    Stop-Process [-Confirm] [-Force] -Name <String[]> [-PassThru] [-WhatIf] [<CommonParameters>]
+    Stop-Process [-Confirm] [-Force] -Name &lt;String[]&gt; [-PassThru] [-WhatIf] [&lt;CommonParameters&gt;]
 ...
 
 REMARKS
@@ -438,8 +437,8 @@ Alias           Get-AdlAnalyticsAccount                            3.2.1      Az
 				</section>
 				<section class="left middle code powershell" data-menu-title="Get-Module">
 					<div>
-						<code class="powershell x-small"><span class="command">Get-Module</span></code>
-						<code class="powershell x-small fragment">
+						<code class="powershell x-small">&gt; <span class="command">Get-Module</span></code>
+						<code class="powershell x-small">
 							<pre>ModuleType Version    Name                                ExportedCommands
 ---------- -------    ----                                ----------------
 Manifest   3.1.0.0    Microsoft.PowerShell.Management     {Add-Computer, Add-Content, Checkpoint-Computer, Clear-Content...}
@@ -453,7 +452,7 @@ Script     1.2        TabExpansionPlusPlus                {Get-ArgumentCompleter
 						</code>
 					</div>
 					<div>
-						<code class="powershell x-small fragment"><span class="command">Install-Module</span><span class="switch"> -Name</span> posh-HumpCompletion</code>
+						<code class="powershell x-small fragment">&gt; <span class="command">Install-Module</span><span class="switch"> -Name</span> posh-HumpCompletion</code>
 					</div>
 					<div>
 						<code class="powershell x-small fragment"><pre class="error">Install-Module : Administrator rights are required to install modules in 'C:\Program Files\WindowsPowerShell\Modules'. Log on to the computer with an account that has Administrator
@@ -470,7 +469,7 @@ At line:1 char:1
 					<div>
 						<code class="powershell x-small fragment">
 							<div class="comment"># or avoid the sea of red...</div>
-							<div><span class="command">Install-Module</span><span class="switch"> -Name</span> posh-HumpCompletion <span class="switch">-Scope</span> CurrentUser</div>
+							<div>&gt; <span class="command">Install-Module</span><span class="switch"> -Name</span> posh-HumpCompletion <span class="switch">-Scope</span> CurrentUser</div>
 						</code>
 					</div>
 					<aside class="notes">
@@ -516,16 +515,13 @@ static string Format(System.IFormatProvider provider, string format, Params Syst
 					</aside>
 				</section>
 			</section>
-			<section style="background-color: #111211;margin-left:-200px;padding-left:200px;padding-right:200px">
-				<img src="demotime2-ps-cowsay2-cut.png" alt="Demo time" style="background-color: #111211;border:none;vertical-align: middle">
-			</section>
-			<section class="left" data-menu-title="Outro">
-				<h1>Thanks!</h1>
+			<section class="left" data-menu-title="References etc">
+				<h1>References!</h1>
 				<ul class="x-small" class="powershell">
 					<li>Slides:
 						<a href="https://github.com/stuartleeks/pwsh-lightning">github.com/stuartleeks/pwsh-lightning</a>
 					</li>
-					<li>Two flavours
+					<li>Two flavours 
 						<ul>
 							<li>PowerShell - full .NET, Windows-only</li>
 							<li>
@@ -554,6 +550,9 @@ static string Format(System.IFormatProvider provider, string format, Params Syst
 						</ul>
 					</li>
 				</ul>
+			</section>
+			<section style="background-color: #111211;margin-left:-200px;padding-left:200px;padding-right:200px" data-menu-title="Demo!">
+				<img src="demotime2-ps-cowsay2-cut.png" alt="Demo time" style="background-color: #111211;border:none;vertical-align: middle">
 			</section>
 		</div>
 	</div>
