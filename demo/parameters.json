@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "agentCount": {
+            "value": 2
+        },
+        "agentVMSize": {
+            "value": "Standard_D2_v2"
+        },
+        "masterEndpointDNSNamePrefix": {
+            "value": "dcosmaster"
+        },
+        "agentEndpointDNSNamePrefix": {
+            "value": "dcosagent"
+        },
+        "sshRSAPublicKey": {
+            "value": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDXXb4Yz594aWa5V4ix9K/CYYHa7q4v4ek12mKARTYViNmWuhrJQp1Ba+tjOqDpLETD0u7a2KY/mzWmowlTaa/Gm+AJXhT0nc9axCEGWfdn0FxlciDT7zept17F1ausKz0A30B3uTnMwGNOqPi0CrQ2Dms95HnUw1CM9l04i1UHtRSoQG7QI6JYq7lIG9fK6J0WLAlzZucTJ2BvRUeXpZLGSukQHXoG7ziKYPsfSFyUqCoSe00GFXTQRkJCGjWivHpL8Pml8SuwXVpWhrzAd/6JI3pKWJTSUPPi2nFTmfj9sNnwqklzk1TWPtep1cIjiN6lbcUphhmCWW8/1wVtUGqD"
+        },
+        "oauthEnabled": {
+            "value": "false"
+        }
+    }
+}
