@@ -349,7 +349,8 @@ body {
       background-color: #008000;
       color: #000080; }
     .reveal code.powershell .error {
-      color: red; }
+      color: red;
+      font-weight: bold; }
   .reveal code.csharp {
     font-family: "Fira Code", "Consolas", Courier;
     color: #DCDCDC;
