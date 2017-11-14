@@ -435,7 +435,6 @@ Alias           Get-AdlAnalyticsAccount                            3.2.1      Az
 					</aside>
 				</section>
 				<section class="left middle code powershell" data-menu-title="Get-Module">
-					<div>
 						<code class="powershell x-small">&gt; <span class="command">Get-Module</span></code>
 						<code class="powershell x-small">
 							<pre>ModuleType Version    Name                                ExportedCommands
@@ -449,11 +448,7 @@ Script     1.2        PSReadline                          {Get-PSReadlineKeyHand
 Script     1.2        TabExpansionPlusPlus                {Get-ArgumentCompleter, Get-CommandTreeCompletion, Get-CommandWithParameter, Get-CompletionPrivateData...}
 </pre>
 						</code>
-					</div>
-					<div>
-						<code class="powershell x-small fragment">&gt; <span class="command">Install-Module</span><span class="switch"> -Name</span> posh-HumpCompletion</code>
-					</div>
-					<div>
+						<code class="powershell x-small fragment" style="margin-top:1em">&gt; <span class="command">Install-Module</span><span class="switch"> -Name</span> posh-HumpCompletion</code>
 						<code class="powershell x-small fragment"><pre class="error">Install-Module : Administrator rights are required to install modules in 'C:\Program Files\WindowsPowerShell\Modules'. Log on to the computer with an account that has Administrator
 rights, and then try again, or install 'C:\Users\stuartle\Documents\WindowsPowerShell\Modules' by adding "-Scope CurrentUser" to your command. You can also try running the Windows
 PowerShell session with elevated rights (Run as Administrator).
@@ -464,13 +459,10 @@ At line:1 char:1
 	+ FullyQualifiedErrorId : InstallModuleNeedsCurrentUserScopeParameterForNonAdminUser,Install-Module
 
 </pre></code>
-					</div>
-					<div>
-						<code class="powershell x-small fragment">
+						<code class="powershell x-small fragment" style="margin-top:1em">
 							<div class="comment"># or avoid the sea of red...</div>
 							<div>&gt; <span class="command">Install-Module</span><span class="switch"> -Name</span> posh-HumpCompletion <span class="switch">-Scope</span> CurrentUser</div>
 						</code>
-					</div>
 					<aside class="notes">
 						<ul>
 							<li>Get-Module to list modules</li>
