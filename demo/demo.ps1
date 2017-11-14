@@ -23,7 +23,7 @@ Invoke-WebRequest https://httpbin.org/get | select -ExpandProperty Content
 $j = Invoke-WebRequest https://httpbin.org/get | select -ExpandProperty Content | ConvertFrom-Json
 $j.origin
 $j.headers
-$j.headers.User<TAB>
+# $j.headers.User<TAB>
 
 
 Invoke-RestMethod https://httpbin.org/get
