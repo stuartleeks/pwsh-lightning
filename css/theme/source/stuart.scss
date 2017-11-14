@@ -74,40 +74,50 @@ section.has-light-background {
     background-color:$powershellBackgroundColor;
   height:100%;
   width:100%;
-  padding-left:200px;
-  margin-left:-200px;
-  padding-right:200px;
+  padding-left:5em;
+  margin-left:-5em;
+  padding-right:5em;
 }
 
   .reveal code {
     font-family: "Fira Code", "Consolas", Courier;
+    display: block;
+    
     
     &.small{
       font-size: 32px
     }
     &.x-small{
-      font-size: 26px
+      font-size: 24px
     }
     &.xx-small{
       font-size: 20px
     }
-     pre {
+    pre {
       margin:0;
       padding:0;
       border:none;
       box-shadow: none;
     }
-   
-  &.powershell{
-    font-family: "Consolas", Courier;
+    
+    &.powershell{
+      font-family: "Consolas", Courier;
     background-color: $powershellBackgroundColor;
-        padding: 1.5em;
-
-        pre{
-          font-family: "Consolas", Courier;
-        }
-        
-        .command {
+    padding: 1.5em;
+    
+    // Workaround for strange bg-color issue with powershell code blocks
+    &:last-child::after  {
+      display:block;
+      height:1000px;
+      visibility: hidden;
+      width:1000px;
+      content: "test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test"
+    }
+    pre{
+      font-family: "Consolas", Courier;
+    }
+    
+    .command {
           color: #ff0;
         }
         .string {

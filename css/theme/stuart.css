@@ -310,16 +310,17 @@ body {
   background-color: #012456;
   height: 100%;
   width: 100%;
-  padding-left: 200px;
-  margin-left: -200px;
-  padding-right: 200px; }
+  padding-left: 5em;
+  margin-left: -5em;
+  padding-right: 5em; }
 
 .reveal code {
-  font-family: "Fira Code", "Consolas", Courier; }
+  font-family: "Fira Code", "Consolas", Courier;
+  display: block; }
   .reveal code.small {
     font-size: 32px; }
   .reveal code.x-small {
-    font-size: 26px; }
+    font-size: 24px; }
   .reveal code.xx-small {
     font-size: 20px; }
   .reveal code pre {
@@ -331,6 +332,12 @@ body {
     font-family: "Consolas", Courier;
     background-color: #012456;
     padding: 1.5em; }
+    .reveal code.powershell:last-child::after {
+      display: block;
+      height: 1000px;
+      visibility: hidden;
+      width: 1000px;
+      content: "test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test,test"; }
     .reveal code.powershell pre {
       font-family: "Consolas", Courier; }
     .reveal code.powershell .command {
