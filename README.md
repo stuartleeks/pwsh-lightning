@@ -1,6 +1,6 @@
 # pwsh-lightning
 
-This is a slide deck originally created for an extended lightning talk at the .NET Oxford user group.
+This is a slide deck originally created for an extended lightning talk at the [.NET Oxford](https://www.meetup.com/dotnetoxford/) user group.
 
 There is a live version of the deck [here](http://pwsh-lightning.azurewebsites.net/)
 
